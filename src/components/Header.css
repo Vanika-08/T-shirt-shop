@@ -59,7 +59,7 @@ header {
   }
 
   .cart-container {
-    margin-left: auto; /* Push the cart to the right */
+    margin-left: 10px; /* Push the cart to the right */
     margin-top: 0; /* Remove the margin top */
   }
 
