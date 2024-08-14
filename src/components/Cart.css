@@ -48,19 +48,13 @@
   object-fit: contain; /* Ensure the entire image is visible */
 }
 
-.item-price {
-  font-size: 16px;
-  font-weight: bold;
-  color: black;
-  margin-bottom: 10px;
-}
-
 /* Item details */
 .item-details {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap; /* Allow wrapping to prevent overflow */
 }
 
 /* Product name */
@@ -69,6 +63,14 @@
   font-weight: bold;
   color: #333;
   margin-right: 20px;
+}
+
+/* Product price */
+.item-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
 }
 
 /* Controls container */
@@ -106,6 +108,15 @@
 
 .remove-button:hover {
   background-color: #d32f2f;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  white-space: normal; /* Allow text to wrap */
+  word-wrap: break-word; /* Break long words if needed */
+  margin-top: 5px;
 }
 
 /* Cart total */
@@ -157,13 +168,29 @@
     align-items: center;
     gap: 10px;
     justify-content: space-between;
+    flex-wrap: wrap; /* Ensure items wrap on small screens */
   }
 
-  .item-name, .item-price {
+  .item-name {
+    font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  .item-price {
+    font-size: 14px;
     margin-bottom: 0;
   }
 
   .controls-container {
     margin-left: 10px;
+  }
+
+  .quantity-button, .remove-button {
+    padding: 4px 8px;
+    font-size: 14px;
+  }
+
+  .error-message {
+    font-size: 12px; /* Reduce font size for smaller screens */
   }
 }
