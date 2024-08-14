@@ -230,7 +230,7 @@
   background-color: #0056b3;
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   .filters-products-container {
     flex-direction: column;
   }
