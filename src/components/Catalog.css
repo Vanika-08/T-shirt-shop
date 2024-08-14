@@ -233,6 +233,7 @@
 @media only screen and (max-width: 768px) {
   .filters-products-container {
     flex-direction: column;
+    align-items: center;
   }
 
   .filters {
@@ -248,10 +249,13 @@
   .products-container {
     flex-direction: column;
     width: 100%;
+    padding-right: 50px; /* Add padding to ensure some space on the edges */
+    box-sizing: border-box;
   }
 
   .product-item {
     width: 100%;
+    margin-bottom: 20px;
   }
 
   .price-add-container {
