@@ -44,8 +44,8 @@
 
 .image-box img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the entire image is visible */
 }
 
 .item-price {
@@ -61,7 +61,6 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 /* Product name */
@@ -70,9 +69,6 @@
   font-weight: bold;
   color: #333;
   margin-right: 20px;
-  flex: 1;
-  word-wrap: break-word;
-  white-space: normal; /* Allow wrapping */
 }
 
 /* Controls container */
@@ -80,7 +76,6 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  flex-wrap: wrap; /* Ensure buttons wrap on smaller screens */
 }
 
 /* Quantity buttons */
@@ -135,41 +130,40 @@
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
+    padding: 10px;
   }
 
   .item-box {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
   }
 
   .image-box {
-    width: 100%;
+    width: 100%; /* Make the image box responsive */
     height: auto;
     margin-bottom: 15px;
   }
 
   .image-box img {
-    width: 100%;
+    width: 100%; /* Ensure the image takes up the full width */
     height: auto;
     object-fit: contain;
   }
 
   .item-details {
     width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 10px;
+    justify-content: space-between;
   }
 
   .item-name, .item-price {
     margin-bottom: 0;
-    width: 100%;
-    word-wrap: break-word; /* Ensure text wraps within the container */
-    white-space: normal; /* Allow text to wrap */
   }
 
   .controls-container {
-    width: 100%;
-    justify-content: space-between;
+    margin-left: 10px;
   }
 }
