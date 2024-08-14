@@ -19,7 +19,7 @@ header {
 
 .cart-container {
   display: flex;
-  margin-left: auto;/* Push the cart to the right */
+  align-items: center;
 }
 
 .cart-link {
@@ -27,7 +27,7 @@ header {
   text-decoration: none;
   font-size: 18px;
   position: relative;
-  margin-left: 100px; /* Space between cart link and any other elements */
+  margin-left: 50px;
 }
 
 .cart-link:hover {
@@ -45,22 +45,28 @@ header {
   right: -10px;
 }
 
-/* Responsive styles for smaller screens */
-@media only screen and  (max-width: 768px) {
-  .nav-container {
-    flex-direction: row; /* Keep the flex direction as row */
-    justify-content: space-between; /* Add this to keep the shop name and cart apart */
-    align-items: center; /* Add this to vertically center the elements */
-  }
-
+/* Responsive styles for mobile */
+@media only screen and (max-width: 480px) {
   .shop-name {
-    margin-bottom: 0; /* Remove the margin bottom */
-    font-size: 20px; /* Allow the shop name to take available space */
+    font-size: 18px;
   }
 
-  .cart-container {
-    margin-left: 10px; /* Push the cart to the right */
-    margin-top: 0; /* Remove the margin top */
+  .cart-link {
+    font-size: 14px;
+  }
+
+  .cart-count {
+    font-size: 0.7em;
+    padding: 1px 4px;
+    top: -5px;
+    right: -5px;
+  }
+}
+
+/* Responsive styles for tablets */
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+  .shop-name {
+    font-size: 20px;
   }
 
   .cart-link {
@@ -68,8 +74,13 @@ header {
   }
 }
 
-@media (max-width: 480px) {
+/* Responsive styles for desktop */
+@media only screen and (min-width: 1025px) {
+  .shop-name {
+    font-size: 24px;
+  }
+
   .cart-link {
-    font-size: 14px;
+    font-size: 18px;
   }
 }
