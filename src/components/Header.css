@@ -46,7 +46,7 @@ header {
 }
 
 /* Responsive styles for smaller screens */
-@media (max-width: 768px) {
+@media only screen and  (max-width: 768px) {
   .nav-container {
     flex-direction: row; /* Keep the flex direction as row */
     justify-content: space-between; /* Add this to keep the shop name and cart apart */
