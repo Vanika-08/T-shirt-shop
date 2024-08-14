@@ -1,38 +1,129 @@
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+header input[type="search"] {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.cart {
+  position: relative;
+  margin-left: 20px;
+}
+
+.cart span {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.cart ul {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: none;
+}
+
+.cart:hover ul {
+  display: block;
+}
+
+.cart li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.cart li:last-child {
+  border-bottom: none;
+}
+
+.cart img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.filters {
+  margin-top: 20px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.filters label {
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filters select {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.product {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.product h2 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.product p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.product button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.product button:hover {
+  background-color: #444;
 }
