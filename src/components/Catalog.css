@@ -107,6 +107,19 @@
   font-size: 14px;
 }
 
+/* Define a custom class for error messages */
+.custom-toast-error {
+  background-color: #ff4d4d; /* Red background */
+  color: white; /* White text color */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.custom-toast-success {
+  background-color: #4caf50; /* Optional success toast style */
+  color: white;
+  border-radius: 5px;
+}
+
 .filters input[type="range"] {
   width: 95%;
   margin-top: 10px;
