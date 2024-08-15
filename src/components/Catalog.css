@@ -298,6 +298,10 @@
     margin-right: -25px; /* Add space between icon and input */
     margin-top: 15px;
   }
+  .notification {
+    width: 90%; /* Ensure it fits well on small screens */
+    font-size: 14px; /* Slightly smaller text */
+  }
 }
 
 @media (max-width: 576px) {
@@ -316,6 +320,10 @@
 
   .add-to-cart-button {
     width: 100%;
+  }
+  .notification {
+    font-size: 12px; /* Even smaller text for very small screens */
+    width: 100%; /* Full width on very small screens */
   }
 }
 
