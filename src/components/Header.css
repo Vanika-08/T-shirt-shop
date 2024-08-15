@@ -2,6 +2,10 @@ header {
   background-color: #333;
   padding: 10px 20px;
   color: #fff;
+  position: sticky; /* Make header sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays above other content */
+  width: 100%; /* Ensure it spans the full width */
 }
 
 .nav-container {
@@ -15,6 +19,8 @@ header {
   font-weight: bold;
   margin: 0;
   flex-grow: 1; /* Allow the shop name to take available space */
+  color: white;
+  text-decoration: none;
 }
 
 .cart-container {

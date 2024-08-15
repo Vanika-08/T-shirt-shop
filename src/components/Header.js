@@ -7,7 +7,9 @@ function Header({ cartItemCount }) {
   return (
     <header>
       <nav className="nav-container">
-        <h1 className="shop-name">T-Shirt Store</h1>
+        <Link to="/" className="shop-name">
+          T-Shirt Store
+        </Link>
         <div className="cart-container">
           <Link to="/cart" className="cart-link">
             <FaShoppingCart className="cart-icon" /> Cart

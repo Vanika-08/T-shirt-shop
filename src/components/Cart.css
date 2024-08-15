@@ -1,12 +1,21 @@
 /* Cart container */
 .cart {
   display: flex;
+  flex-direction: column;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1200px;
+  max-width: 800px;
   margin: 0 auto;
+}
+
+/* Cart heading */
+.head {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
 }
 
 /* Cart items container */
@@ -20,6 +29,7 @@
 /* Cart item */
 .cart-item {
   display: flex;
+  flex-direction: column;
   padding: 15px;
   background-color: #fff;
   border-radius: 8px;
@@ -30,14 +40,15 @@
 /* Item box */
 .item-box {
   display: flex;
+  flex-direction: column;
   gap: 20px;
   width: 100%;
 }
 
 /* Image box */
 .image-box {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto; /* Allow height to adjust automatically */
   border-radius: 8px;
   overflow: hidden;
 }
@@ -45,16 +56,17 @@
 .image-box img {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the entire image is visible */
+  object-fit: contain; /* Adjust image size without cutting off */
 }
 
 /* Item details */
 .item-details {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+  flex-wrap: wrap;
 }
 
 /* Product name */
@@ -114,8 +126,8 @@
 .error-message {
   color: red;
   font-size: 14px;
-  white-space: normal; /* Allow text to wrap */
-  word-wrap: break-word; /* Break long words if needed */
+  white-space: normal;
+  word-wrap: break-word;
   margin-top: 5px;
 }
 
@@ -132,8 +144,108 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive design */
-@media only screen and (max-width: 768px) {
+/* Desktop styles */
+@media only screen and (min-width: 1200px) {
+  .cart {
+    flex-direction: row;
+  }
+
+  .cart-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-box {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .image-box {
+    width: 150px;
+    height: auto; /* Adjust height */
+  }
+
+  .item-details {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .item-name {
+    font-size: 20px;
+  }
+
+  .item-price {
+    font-size: 18px;
+  }
+
+  .quantity-button,
+  .remove-button {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+
+  .error-message {
+    font-size: 16px;
+  }
+
+  .cart-total {
+    font-size: 24px;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  .cart {
+    flex-direction: row;
+  }
+
+  .cart-item {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .item-box {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .image-box {
+    width: 120px;
+    height: auto; /* Adjust height */
+  }
+
+  .item-details {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .item-name {
+    font-size: 18px;
+  }
+
+  .item-price {
+    font-size: 16px;
+  }
+
+  .quantity-button,
+  .remove-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .error-message {
+    font-size: 14px;
+  }
+
+  .cart-total {
+    font-size: 20px;
+  }
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 767px) {
   .cart {
     flex-direction: column;
   }
@@ -141,56 +253,43 @@
   .cart-item {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
   }
 
   .item-box {
     flex-direction: column;
-    width: 100%;
     gap: 10px;
   }
 
   .image-box {
-    width: 100%; /* Make the image box responsive */
-    height: auto;
-    margin-bottom: 15px;
-  }
-
-  .image-box img {
-    width: 100%; /* Ensure the image takes up the full width */
-    height: auto;
-    object-fit: contain;
+    width: 100%;
+    height: auto; /* Adjust height */
   }
 
   .item-details {
-    width: 100%;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ensure items wrap on small screens */
   }
 
   .item-name {
     font-size: 16px;
-    margin-bottom: 0;
   }
 
   .item-price {
     font-size: 14px;
-    margin-bottom: 0;
   }
 
-  .controls-container {
-    margin-left: 10px;
-  }
-
-  .quantity-button, .remove-button {
+  .quantity-button,
+  .remove-button {
     padding: 4px 8px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .error-message {
-    font-size: 12px; /* Reduce font size for smaller screens */
+    font-size: 12px;
+  }
+
+  .cart-total {
+    font-size: 18px;
   }
 }

@@ -13,29 +13,35 @@ function Catalog({ onAddToCart }) {
     priceRange: [0, 10000],
     type: "",
   });
-  const [cart, setCart] = useState(
-    JSON.parse(localStorage.getItem("cart")) || {}
-  );
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || {});
   const [showFilters, setShowFilters] = useState(false); // State to toggle filters visibility
-  
 
   const handleAddToCart = (item) => {
     const availableItem = data.find((i) => i.id === item.id);
-    if (!availableItem || item.quantity <= 0) return;
+    if (!availableItem || availableItem.quantity <= 0) return;
 
     const currentQuantity = cart[item.id] || 0;
     if (currentQuantity >= availableItem.quantity) {
-      toast.error(`Cannot add more than ${availableItem.quantity} of this item.`);
+      toast.error(`Cannot add more than ${availableItem.quantity} of this item.`, {
+        position: "bottom-center",
+      });
       return;
     }
 
-    // Add item to cart
-    const newCart = { ...cart, [item.id]: (currentQuantity || 0) + item.quantity };
+    // Update cart with the new item quantity
+    const newCart = { ...cart, [item.id]: currentQuantity + 1 };
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
-    
+
     // Show success message
-    toast.success("Item added to cart!");
+    toast.success("Item added to cart!", {
+      position: "bottom-center",
+    });
+
+    // Update cart item count
+    const totalCount = Object.values(newCart).reduce((acc, count) => acc + count, 0);
+    setCart(totalCount);
+    onAddToCart(item);
   };
 
   const filteredItems = data.filter(
@@ -74,6 +80,7 @@ function Catalog({ onAddToCart }) {
         }`}
       >
         <div className={`filters ${showFilters ? "" : "collapsed"}`}>
+          {/* Filter Controls */}
           <label>
             Gender:
             <select

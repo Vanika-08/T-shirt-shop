@@ -46,6 +46,7 @@ function Cart({ cart, updateCart }) {
 
   return (
     <div><br></br>
+    <h2 className="head" >Shopping Cart</h2><br></br>
       <div className="cart">
         <div className="cart-items">
           {cartItems.length > 0 ? (
