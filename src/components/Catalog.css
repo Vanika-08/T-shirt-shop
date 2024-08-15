@@ -3,9 +3,12 @@
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center horizontally */
-  justify-content: center; /* Center vertically */
-  min-height: 100vh; /* Full viewport height to ensure vertical centering */
+  align-items: center;
+  /* Center horizontally */
+  justify-content: center;
+  /* Center vertically */
+  min-height: 100vh;
+  /* Full viewport height to ensure vertical centering */
 }
 
 
@@ -14,19 +17,25 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  position: relative; /* To position search icon inside */
-  width: 100%; /* Adjust as needed */
-  max-width: 600px; /* Limit the width of search container */
+  position: relative;
+  /* To position search icon inside */
+  width: 100%;
+  /* Adjust as needed */
+  max-width: 600px;
+  /* Limit the width of search container */
 }
 
 .search-icon {
   position: absolute;
-  left: 10px; /* Space between icon and input */
-  color: #aaa; /* Adjust color as needed */
+  left: 10px;
+  /* Space between icon and input */
+  color: #aaa;
+  /* Adjust color as needed */
 }
 
 .search-input {
-  padding: 10px 10px 10px 40px; /* Add padding to the left to make space for the icon */
+  padding: 10px 10px 10px 40px;
+  /* Add padding to the left to make space for the icon */
   width: 100%;
   border-radius: 5px;
   border: 1px solid #ddd;
@@ -40,19 +49,26 @@
 @media (max-width: 768px) {
   .search-container {
     flex-direction: column;
-    width: 100%; /* Full width on smaller screens */
+    width: 100%;
+    /* Full width on smaller screens */
   }
 
   .search-icon {
-    position: absolute; /* Keeps the icon inside the input on small screens */
-    left: 10px; /* Space between icon and input */
-    top: 50%; /* Vertically centers the icon */
-    transform: translateY(-50%); /* Adjust to the center vertically */
-    margin-bottom: 0; /* Remove margin-bottom */
+    position: absolute;
+    /* Keeps the icon inside the input on small screens */
+    left: 10px;
+    /* Space between icon and input */
+    top: 50%;
+    /* Vertically centers the icon */
+    transform: translateY(-50%);
+    /* Adjust to the center vertically */
+    margin-bottom: 0;
+    /* Remove margin-bottom */
   }
 
   .search-input {
-    margin-bottom: 10px; /* Space below input on smaller screens */
+    margin-bottom: 10px;
+    /* Space below input on smaller screens */
     max-width: 100%;
   }
 
@@ -75,7 +91,8 @@
 .filters-products-container {
   display: flex;
   flex-wrap: wrap;
-  width: 100%; /* Ensure it takes full width */
+  width: 100%;
+  /* Ensure it takes full width */
 }
 
 .filters {
@@ -88,7 +105,8 @@
   max-height: calc(100vh - 100px);
   overflow-y: auto;
   background-color: #fff;
-  z-index: 10; /* Ensure it stays on top */
+  z-index: 10;
+  /* Ensure it stays on top */
 }
 
 .filters label {
@@ -98,7 +116,8 @@
   color: #333;
 }
 
-.filters select, .filters input {
+.filters select,
+.filters input {
   width: 100%;
   padding: 8px;
   margin-top: 5px;
@@ -109,13 +128,17 @@
 
 /* Define a custom class for error messages */
 .custom-toast-error {
-  background-color: #ff4d4d; /* Red background */
-  color: white; /* White text color */
-  border-radius: 5px; /* Optional: rounded corners */
+  background-color: #ff4d4d;
+  /* Red background */
+  color: white;
+  /* White text color */
+  border-radius: 5px;
+  /* Optional: rounded corners */
 }
 
 .custom-toast-success {
-  background-color: #4caf50; /* Optional success toast style */
+  background-color: #4caf50;
+  /* Optional success toast style */
   color: white;
   border-radius: 5px;
 }
@@ -123,7 +146,7 @@
 .filters input[type="range"] {
   width: 95%;
   margin-top: 10px;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   background-color: transparent;
 }
 
@@ -198,7 +221,7 @@
   border-radius: 8px;
   overflow: hidden;
   width: calc(33% - 20px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -219,14 +242,16 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
-  flex-wrap: nowrap; /* add this line */
+  flex-wrap: nowrap;
+  /* add this line */
 }
 
 .product-price {
   font-size: 18px;
   color: #333;
   font-weight: bold;
-  margin-right: 10px; /* add some space between price and button */
+  margin-right: 10px;
+  /* add some space between price and button */
 }
 
 .add-to-cart-button {
@@ -237,7 +262,8 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  flex-shrink: 0; /* Ensures the button does not shrink */
+  flex-shrink: 0;
+  /* Ensures the button does not shrink */
 }
 
 .add-to-cart-button:hover {
@@ -263,7 +289,8 @@
   .products-container {
     flex-direction: column;
     width: 100%;
-    padding-right: 50px; /* Add padding to ensure some space on the edges */
+    padding-right: 50px;
+    /* Add padding to ensure some space on the edges */
     box-sizing: border-box;
   }
 
@@ -279,16 +306,21 @@
 
   .search-container {
     /* flex-direction: column; */
-    flex-direction: row; /* Align search input and filter icon side by side */
-    width: 100%; /* Full width on smaller screens */
-    align-items: center; /* Align items vertically in the center */
+    flex-direction: row;
+    /* Align search input and filter icon side by side */
+    width: 100%;
+    /* Full width on smaller screens */
+    align-items: center;
+    /* Align items vertically in the center */
   }
 
   .search-input {
     /* margin-bottom: 10px; Space below input on smaller screens */
     /* max-width: 100%; */
-    flex: 1; /* Allow input to take remaining space */
-    margin-bottom: 0; /* Remove space below input */
+    flex: 1;
+    /* Allow input to take remaining space */
+    margin-bottom: 0;
+    /* Remove space below input */
     margin-right: 10px;
   }
 
@@ -306,14 +338,20 @@
   .filter-icon:hover {
     background-color: #0056b3;
   }
+
   .search-icon {
-    position: static; /* Remove absolute positioning for better alignment */
-    margin-right: -25px; /* Add space between icon and input */
+    position: static;
+    /* Remove absolute positioning for better alignment */
+    margin-right: -25px;
+    /* Add space between icon and input */
     margin-top: 15px;
   }
+
   .notification {
-    width: 90%; /* Ensure it fits well on small screens */
-    font-size: 14px; /* Slightly smaller text */
+    width: 90%;
+    /* Ensure it fits well on small screens */
+    font-size: 14px;
+    /* Slightly smaller text */
   }
 }
 
@@ -325,23 +363,29 @@
 
   .search-icon {
     position: absolute;
-    left: 5px; /* Keep the icon inside the input */
+    left: 5px;
+    /* Keep the icon inside the input */
     top: 10%;
     transform: translateY(-50%);
-    margin-bottom: 30px; /* Remove margin-bottom */
+    margin-bottom: 30px;
+    /* Remove margin-bottom */
   }
 
   .add-to-cart-button {
     width: 100%;
   }
+
   .notification {
-    font-size: 12px; /* Even smaller text for very small screens */
-    width: 100%; /* Full width on very small screens */
+    font-size: 12px;
+    /* Even smaller text for very small screens */
+    width: 100%;
+    /* Full width on very small screens */
   }
 }
 
 
 /* Display notifications based on class */
 .show-notification .notification {
-  display: block; /* Show notification */
+  display: block;
+  /* Show notification */
 }
