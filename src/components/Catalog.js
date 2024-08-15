@@ -39,8 +39,7 @@ function Catalog({ onAddToCart }) {
     });
 
     // Update cart item count
-    const totalCount = Object.values(newCart).reduce((acc, count) => acc + count, 0);
-    setCart(totalCount);
+    
     onAddToCart(item);
   };
 

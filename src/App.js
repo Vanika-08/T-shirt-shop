@@ -21,10 +21,7 @@ function App() {
     if (updatedCart[item.id]) {  
       if (updatedCart[item.id] < availableStock) {  
         updatedCart[item.id] += 1;  
-      } else {  
-        // alert('Cannot add more than available stock');  
-        return;  
-      }  
+      } 
     } else {  
       updatedCart[item.id] = 1;  
     }  
